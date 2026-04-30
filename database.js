@@ -72,9 +72,9 @@ const criarBanco = async () => {
     const todosPilotos = await db.all("SELECT * FROM pilotos");
     console.log(todosPilotos);
 
-    
+    return db;
     };
-criarBanco();
+module.exports = { criarBanco }
 
 
 const criarTabela = async () => {
@@ -335,13 +335,11 @@ console.log("----- Relatório Final -----");
 const resultadoFinal = await db.all ("SELECT * FROM rotina");
 console.log(resultadoFinal);
 
-
+return db;
 };      
-criarBanco()
 
-};
 
-criarTabela()
+module.exports = { criarTabela }
 
 
 
